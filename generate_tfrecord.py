@@ -1,22 +1,18 @@
-
-'''
+"""
 File: generate_tfrecord.py
 Project: model-part
 File Created: Thursday, 5th July 2018 3:44:27 pm
 Author: https://github.com/datitran/raccoon_dataset/blob/master/test_generate_tfrecord.py
 -----
-Last Modified: Thursday, 5th July 2018 3:45:39 pm
+Last Modified: Thursday, 5th July 2018 4:21:48 pm
 Modified By: Sujan Poudel 
-'''
 
-"""
+
 Usage:
   # From tensorflow/models/
-  # Create train data:
-  python generate_tfrecord.py --csv_input=data/train_labels.csv  --output_path=train.record
+  # Create data:
+  python generate_tfrecord.py --csv_input=data/train_labels.csv --images_path=path/to/images/folder  --output_path=train.record
 
-  # Create test data:
-  python generate_tfrecord.py --csv_input=data/test_labels.csv  --output_path=test.record
 """
 from __future__ import division
 from __future__ import print_function
@@ -34,34 +30,17 @@ from collections import namedtuple, OrderedDict
 flags = tf.app.flags
 flags.DEFINE_string('csv_input', '', 'Path to the CSV input')
 flags.DEFINE_string('output_path', '', 'Path to output TFRecord')
+flags.DEFINE_string('images_path','' ,'Path to the folder containing images,files will be searched in subdirectories(only one step down)')
 FLAGS = flags.FLAGS
 
+possible_paths = [x[0] for x in os.walk(FLAGS.images_path)]
 
 # TO-DO replace this with label map
 def class_text_to_int(row_label):
-    if row_label == 'resistor':
+   if row_label == 'raccoon':
         return 1
-    elif row_label =='zener diode' or row_label == " zener diode ":
-        return 2
-    elif row_label =='LED':
-        return 3
-    elif row_label =='ceramic capacitor' or row_label == "ceramic capacitor ":
-        return 4
-    elif row_label =='polarised capacitor':
-        return 5
-    elif row_label =='polypropylene film capacitor':
-        return 6
-    elif row_label =='diode':
-        return 7
-    elif row_label =='field effect transistor':
-        return 8
-    elif row_label =='darlington transistor ic':
-        return 9
-    elif row_label =='Transistor' or row_label=="transister":
-        return 10
     else:
-        print("label=:"+row_label)
-        return None
+        None
 
 
 def split(df, group):
@@ -70,7 +49,15 @@ def split(df, group):
     return [data(filename, gb.get_group(x)) for filename, x in zip(gb.groups.keys(), gb.groups)]
 
 
-def create_tf_example(group, path):
+def create_tf_example(group):
+    for path in possible_paths:
+        filePath = os.path.join(os.getcwd(),path,"{}".format(group.filename))
+        if(os.path.isfile(filePath)):
+            break
+    if(os.path.isfile(filePath)):
+        print("file exist at {}".format(filePath))
+    else:
+        print("file not found at at {}".format(filePath))
     with tf.gfile.GFile(os.path.join(path, '{}'.format(group.filename)), 'rb') as fid:
         encoded_jpg = fid.read()
     encoded_jpg_io = io.BytesIO(encoded_jpg)
@@ -113,11 +100,10 @@ def create_tf_example(group, path):
 
 def main(_):
     writer = tf.python_io.TFRecordWriter(FLAGS.output_path)
-    path = os.path.join(os.getcwd(), 'images/test')
     examples = pd.read_csv(FLAGS.csv_input)
     grouped = split(examples, 'filename')
     for group in grouped:
-        tf_example = create_tf_example(group, path)
+        tf_example = create_tf_example(group)
         writer.write(tf_example.SerializeToString())
 
     writer.close()
