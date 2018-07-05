@@ -37,10 +37,22 @@ possible_paths = [x[0] for x in os.walk(FLAGS.images_path)]
 
 # TO-DO replace this with label map
 def class_text_to_int(row_label):
-   if row_label == 'raccoon':
-        return 1
+    if row_label == 'Electrolytic Capacitor' or row_label == "Electrolytic-Capacitor" or row_label == "Electrolytic-capacitor":
+            return 1
+    elif row_label =='LED':
+        return 2
+    elif row_label =='ceramic capacitor' or row_label == "ceramic capacitor ":
+        return 3
+    elif row_label =='diode':
+        return 4
+    elif row_label =='resistor':
+        return 5
+    elif row_label =='transistor':
+        return 6
     else:
-        None
+        print("label=:{}:".format(row_label))
+        return None
+
 
 
 def split(df, group):
