@@ -1,0 +1,62 @@
+<annotation>
+	<folder>Electrolytic-capacitor</folder>
+	<filename>Electrolytic-capacitor020.jpg</filename>
+	<path>D:\Shreeya\projects\train\Electrolytic-capacitor\Electrolytic-capacitor020.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>256</width>
+		<height>128</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Electrolytic Capacitor</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>8</xmin>
+			<ymin>18</ymin>
+			<xmax>43</xmax>
+			<ymax>76</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Electrolytic Capacitor</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>171</xmin>
+			<ymin>2</ymin>
+			<xmax>251</xmax>
+			<ymax>128</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Electrolytic Capacitor</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>102</xmin>
+			<ymin>3</ymin>
+			<xmax>161</xmax>
+			<ymax>128</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Electrolytic Capacitor</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>45</xmin>
+			<ymin>12</ymin>
+			<xmax>96</xmax>
+			<ymax>94</ymax>
+		</bndbox>
+	</object>
+</annotation>

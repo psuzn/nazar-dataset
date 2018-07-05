@@ -1,0 +1,38 @@
+<annotation>
+	<folder>Electrolytic-capacitor</folder>
+	<filename>Electrolytic-capacitor1112.jpg</filename>
+	<path>D:\Shreeya\projects\train\Electrolytic-capacitor\Electrolytic-capacitor1112.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>256</width>
+		<height>128</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Electrolytic Capacitor</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>156</xmin>
+			<ymin>60</ymin>
+			<xmax>206</xmax>
+			<ymax>93</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Electrolytic Capacitor</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>27</xmin>
+			<ymin>64</ymin>
+			<xmax>105</xmax>
+			<ymax>100</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>transistor</folder>
+	<filename>transistor_2_11.jpeg</filename>
+	<path>D:\Shreeya\projects\train\transistor\transistor_2_11.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>230</width>
+		<height>219</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>transistor</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>113</xmin>
+			<ymin>1</ymin>
+			<xmax>229</xmax>
+			<ymax>102</ymax>
+		</bndbox>
+	</object>
+</annotation>

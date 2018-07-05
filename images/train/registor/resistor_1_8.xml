@@ -1,0 +1,26 @@
+<annotation>
+	<folder>resistor_1</folder>
+	<filename>resistor_1_8.jpeg</filename>
+	<path>/home/suzan/projects/selenium-google-similar-image-scrapper/download/resistor_1/resistor_1_8.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>225</width>
+		<height>225</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>resistor</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>64</xmin>
+			<ymin>79</ymin>
+			<xmax>157</xmax>
+			<ymax>170</ymax>
+		</bndbox>
+	</object>
+</annotation>

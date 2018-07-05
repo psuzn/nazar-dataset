@@ -1,0 +1,26 @@
+<annotation>
+	<folder>LED</folder>
+	<filename>LED955.jpg</filename>
+	<path>D:\Shreeya\projects\train\LED\LED955.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>256</width>
+		<height>128</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>LED</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>52</xmin>
+			<ymin>37</ymin>
+			<xmax>204</xmax>
+			<ymax>114</ymax>
+		</bndbox>
+	</object>
+</annotation>

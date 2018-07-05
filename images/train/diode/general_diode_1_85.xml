@@ -1,0 +1,26 @@
+<annotation verified="yes">
+	<folder>general_diode_1</folder>
+	<filename>general_diode_1_85.jpeg</filename>
+	<path>/home/suzan/projects/selenium-google-similar-image-scrapper/download/general_diode_1/general_diode_1_85.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>225</width>
+		<height>225</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>diode</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>57</xmin>
+			<ymin>41</ymin>
+			<xmax>179</xmax>
+			<ymax>155</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>ceramic_cap_0</folder>
+	<filename>ceramic_cap_0_31.jpeg</filename>
+	<path>/home/suzan/projects/selenium-google-similar-image-scrapper/download/ceramic_cap_0/ceramic_cap_0_31.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>168</width>
+		<height>168</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>ceramic capacitor </name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>15</xmin>
+			<ymin>29</ymin>
+			<xmax>99</xmax>
+			<ymax>107</ymax>
+		</bndbox>
+	</object>
+</annotation>
