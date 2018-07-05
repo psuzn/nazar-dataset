@@ -4,7 +4,7 @@ Project: model-part
 File Created: Thursday, 5th July 2018 2:54:38 pm
 Author: https://github.com/datitran/raccoon_dataset/blob/master/xml_to_csv.py
 -----
-Last Modified: Thursday, 5th July 2018 3:35:14 pm
+Last Modified: Thursday, 5th July 2018 3:37:38 pm
 Modified By: Sujan Poudel 
 '''
 
@@ -15,6 +15,8 @@ import pandas as pd
 
 TRAIN_IMAGES_DIRECTORY = "./images/train"
 TEST_IMAGES_DIRECTORY = "./images/test"
+
+OUTPUT_DIRECTORY ="./coverted-data"
 
 def xml_to_csv(image_directory): 
     xml_list = []
@@ -41,11 +43,11 @@ def xml_to_csv(image_directory):
 
 def main():
     xml_df = xml_to_csv(TRAIN_IMAGES_DIRECTORY)
-    xml_df.to_csv('train_data.csv', index=None)
+    xml_df.to_csv('{}/train_data.csv'.format(OUTPUT_DIRECTORY), index=None)
     print('Successfully converted train image xmls to csv.')
 
     xml_df = xml_to_csv(TEST_IMAGES_DIRECTORY)
-    xml_df.to_csv('train_data.csv', index=None)
+    xml_df.to_csv('{}/test_data.csv'.format(OUTPUT_DIRECTORY), index=None)
     print('Successfully converted test image xmls to csv.')
 
 main()
