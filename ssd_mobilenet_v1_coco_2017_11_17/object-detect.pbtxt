@@ -1,0 +1,24 @@
+item {
+  id: 1
+  name: 'Electrolytic Capacitor'
+}
+item {
+  id: 2
+  name: 'LED'
+}
+item {
+  id: 3
+  name: 'Ceramic Capacitor'
+}
+item {
+  id: 4
+  name: 'Diode'
+}
+item {
+  id: 5
+  name: 'Resistor'
+}
+item {
+  id: 6
+  name: 'Transistor'
+}
