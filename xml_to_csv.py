@@ -16,7 +16,7 @@ import pandas as pd
 TRAIN_IMAGES_DIRECTORY = "./images/train"
 TEST_IMAGES_DIRECTORY = "./images/test"
 
-OUTPUT_DIRECTORY ="./coverted-data"
+OUTPUT_DIRECTORY ="./converted-data"
 
 def xml_to_csv(image_directory): 
     xml_list = []
