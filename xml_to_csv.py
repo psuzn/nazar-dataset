@@ -4,7 +4,7 @@ Project: model-part
 File Created: Thursday, 5th July 2018 2:54:38 pm
 Author: https://github.com/datitran/raccoon_dataset/blob/master/xml_to_csv.py
 -----
-Last Modified: Thursday, 5th July 2018 3:37:38 pm
+Last Modified: Tuesday, 14th August 2018 11:53:25 am
 Modified By: Sujan Poudel 
 '''
 
@@ -13,10 +13,10 @@ import glob
 import xml.etree.ElementTree as ET
 import pandas as pd
 
-TRAIN_IMAGES_DIRECTORY = "./images/train"
-TEST_IMAGES_DIRECTORY = "./images/test"
+TRAIN_IMAGES_DIRECTORY = "images/train"
+TEST_IMAGES_DIRECTORY = "images/test"
 
-OUTPUT_DIRECTORY ="./coverted-data"
+OUTPUT_DIRECTORY ="converted-data"
 
 def xml_to_csv(image_directory): 
     xml_list = []
